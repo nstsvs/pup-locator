@@ -6,7 +6,7 @@ import '../../styles/map.scss'
 
 const mapOptions = {
     id: 'google-map-script',
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey: import.meta.env.GOOGLE_MAPS_API_KEY,
 };
 
 interface MapProps {
@@ -26,6 +26,10 @@ const Map: React.FC<MapProps> = ({ dogs, onDogClick }) => {
             mapContainerClassName="map-container"
             center={mapCenter}
             zoom={30}
+            options={{
+                disableDefaultUI: true,
+                styles: [], // Пустой массив стилей для "очистки" карты
+            }}
         >
             {dogs.map(dog => (
                 <DogMarker
