@@ -3,7 +3,6 @@ import Map from './components/map/map.tsx';
 import Modal from './components/modal/dog-modal.tsx';
 import { Dog } from './types/dog.ts';
 import dogs from './data/dogs.ts';
-// import './App.scss';
 
 const App: React.FC = () => {
     const [selectedDog, setSelectedDog] = useState<Dog | null>(null);

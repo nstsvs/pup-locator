@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dog } from '../../types/dog.ts';
-import '../../styles/dog-modal.scss'
+import '../../styles/modal.scss'
 
 interface DogModalProps {
     dog: Dog;
@@ -9,9 +9,9 @@ interface DogModalProps {
 
 const DogModal: React.FC<DogModalProps> = ({ dog, onClose }) => {
     return (
-        <div className="dog-modal">
+        <div className={'modal'}>
             <h2>{dog.name}</h2>
-            <img src={dog.image} alt={dog.name} />
+            <img className={'modal__img'} src={dog.image} alt={dog.name} />
             <p>{dog.description}</p>
             <button onClick={onClose}>Закрыть</button>
         </div>
