@@ -10,6 +10,6 @@
 
 ## Технологии:
 - React
-- CSS
+- SCSS
 - Google Maps API
 - Vite
