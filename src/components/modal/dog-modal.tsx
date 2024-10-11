@@ -10,10 +10,14 @@ interface DogModalProps {
 const DogModal: React.FC<DogModalProps> = ({ dog, onClose }) => {
     return (
         <div className={'modal'}>
-            <h2>{dog.name}</h2>
-            <img className={'modal__img'} src={dog.image} alt={dog.name} />
-            <p>{dog.description}</p>
-            <button onClick={onClose}>Закрыть</button>
+            <div className={'modal__container'}>
+                <h1>{dog.name}</h1>
+                <div className={'modal-content'}>
+                    <img className={'modal__img'} src={dog.image} alt={dog.name} />
+                </div>
+                <p>{dog.description}</p>
+                <button onClick={onClose}>Закрыть</button>
+            </div>
         </div>
     );
 };
