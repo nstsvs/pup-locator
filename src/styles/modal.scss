@@ -1,0 +1,29 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 10px);
+  max-width: 400px;
+  //max-height: 300px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.modal__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.modal__img {
+  max-width: 400px;
+  width: 100%;
+}
